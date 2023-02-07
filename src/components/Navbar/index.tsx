@@ -8,11 +8,18 @@ import { useState } from "react";
 export function Navbar(){
 
     const [open,setOpen] = useState(false)
+    const [grade,setGrade]=useState(0)
+
+    function toogleMenu(){
+        setOpen((prev:boolean)=>!prev)
+        setGrade(prev=>(prev === 0 ? 45 :0))
+    }
+
 
     return(
         <>
         <Wrapper>
-            <MenuIcon setOpen={setOpen}/>
+            <MenuIcon toogleMenu={toogleMenu} grade={grade}/>
             <Logo/>
             <span className="items768px">
                 <NavItem title={'Home'} link={'/'}/>
@@ -32,8 +39,11 @@ export function Navbar(){
                 </a>
             </span>
         </Wrapper>
-        <MenuMobile open={open}>
-            <h1>Mobile aqui</h1>
+        <MenuMobile open={open} onClick={()=>toogleMenu()}>
+            <NavItem title={'Home'} link={'/'}/>
+            <NavItem title={'Skills'} link={'/skills'}/>
+            <NavItem title={'Portifolio'} link={'/portifolio'}/>
+            <NavItem title={'Contact'} link={'/contact'}/>
         </MenuMobile>
         </>
     )

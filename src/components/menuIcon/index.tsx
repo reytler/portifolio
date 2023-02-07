@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import { HiOutlineMinus } from 'react-icons/hi';
 import styled from 'styled-components'
 
@@ -30,14 +29,7 @@ const Container = styled.span`
     }
 `;
 
-export default function MenuIcon({setOpen}:any){
-    const [grade,setGrade]=useState(0)
-
-    function toogleMenu(){
-        setOpen((prev:boolean)=>!prev)
-        setGrade(prev=>(prev === 0 ? 45 :0))
-    }
-
+export default function MenuIcon({toogleMenu, grade}:any){
     return(
         <Container>
             <Wrapper grade={grade} onClick={()=>toogleMenu()}>

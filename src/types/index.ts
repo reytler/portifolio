@@ -5,7 +5,8 @@ interface Icolors {
     secondary: string,
     hover: string,
     active: string,
-    borderPhoto: string
+    borderPhoto: string,
+    opaco: string
 }
 
 export interface DefaultTheme {

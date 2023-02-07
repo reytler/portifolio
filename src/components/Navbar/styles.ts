@@ -1,4 +1,4 @@
-import styled, { DefaultTheme } from "styled-components";
+import styled, { DefaultTheme, keyframes } from "styled-components";
 
 export const Wrapper = styled.div<{theme: DefaultTheme }>`
     background-color: ${({theme})=>theme.colors.navbarBg};
@@ -39,7 +39,39 @@ export const Wrapper = styled.div<{theme: DefaultTheme }>`
     }
 `;
 
+const fadeIn = keyframes`
+    0% {
+        opacity: 0;
+        height: 0;
+        display: none;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        display: flex;
+     }
+`;
+
+const fadeOut = keyframes`
+    0% {
+        opacity: 1;
+        display: flex;
+    }
+    100% {
+        opacity: 0;
+        height: 0;
+        display: none;
+        visibility: hidden;
+     }
+`;
+
 export const MenuMobile = styled.div<{theme: DefaultTheme,open: boolean }>`
     background-color: ${({theme})=>theme.colors.navbarBg};
-    display: ${({open})=>open?'flex':'none'};
+    animation: ${({open})=>open?fadeIn:fadeOut} 0.5s forwards;
+    position: absolute;
+    width: 100vw;
+
+    @media (min-width: 768px) {
+        display: none !important;
+    }
 `;

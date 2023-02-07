@@ -30,6 +30,7 @@ export const GlobalStyles =  createGlobalStyle<{theme: DefaultTheme }>`
     }
 
     body {
+        transition: all .2s ease-in;
         background: ${({theme}) => theme.colors.background};
         font-size: 16px;
         color: ${({ theme }) => theme.colors.primary};

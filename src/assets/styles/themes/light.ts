@@ -8,6 +8,7 @@ export const light: DefaultTheme = {
         secondary: '#048aae',
         hover: '#2088b0',
         active: '#5bdbfc',
-        borderPhoto: '#ebf0fd'
+        borderPhoto: '#ebf0fd',
+        opaco: 'rgba(238,242,250,0.3)'
     },
 }
