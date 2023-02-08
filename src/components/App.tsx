@@ -7,15 +7,13 @@ import Routesapp from '../Routes';
 import { Navbar } from './Navbar';
 import { FontSelector } from './fontSelector';
 import { Fonts } from '../Contantes';
+import { useTheme } from '../contexts/ContextTheme';
 
 function App() {
 
-  const [theme,setTheme]=useState(dark)
   const [font,setFont]=useState('Sora')
 
-  function toogleTheme(){
-    setTheme(prev=>(prev === dark?light:dark))
-  }
+  const {theme} = useTheme();
 
   return (
     <ThemeProvider theme={theme}>
@@ -27,9 +25,6 @@ function App() {
             <option key={index} value={font}>{font}</option>
           ))}
         </select>
-        <button
-          onClick={()=>toogleTheme()}
-        >Toogle Theme</button>
         <Routesapp/>
       </FontSelector>
     </ThemeProvider>

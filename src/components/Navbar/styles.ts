@@ -66,6 +66,7 @@ const fadeOut = keyframes`
 `;
 
 export const MenuMobile = styled.div<{theme: DefaultTheme,open: boolean }>`
+
     background-color: ${({theme})=>theme.colors.navbarBg};
     animation: ${({open})=>open?fadeIn:fadeOut} 0.5s forwards;
     position: absolute;
@@ -73,5 +74,35 @@ export const MenuMobile = styled.div<{theme: DefaultTheme,open: boolean }>`
 
     @media (min-width: 768px) {
         display: none !important;
+    }
+
+    .social{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .icon{
+        transition: all .2s ease-in;
+        cursor: pointer;
+        text-decoration: none;
+        color: ${({theme})=>theme.colors.primary};
+
+        &:active {
+            color: ${({theme})=>theme.colors.active};
+        }
+
+        &:visited {
+            color: ${({theme})=>theme.colors.primary};
+        }
+    }
+
+    .wrapperswitch{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        width: 100%;
+        padding: 5px 0 15px 0;
     }
 `;
