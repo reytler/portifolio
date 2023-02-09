@@ -5,6 +5,7 @@ import {FaGithub,FaInstagram, FaLinkedin} from "react-icons/fa";
 import MenuIcon from "../menuIcon";
 import { useState } from "react";
 import Swicth from "../Switch";
+import SocialIcons from "../sociaIIcons";
 
 export function Navbar(){
 
@@ -28,15 +29,7 @@ export function Navbar(){
                 <NavItem title={'Contact'} link={'/contact'}/>
             </span>
             <span className="items768px">
-                <a href="https://github.com/reytler" target={'_blank'} rel="noopener noreferrer">
-                    <FaGithub size={40} className="icon"/>
-                </a>
-                <a href="https://www.linkedin.com/in/reytlersouza-dev/" target={'_blank'} rel="noopener noreferrer">
-                    <FaLinkedin size={40} className="icon"/>
-                </a>
-                <a href="https://www.instagram.com/reytlermatheus/" target={'_blank'} rel="noopener noreferrer">
-                    <FaInstagram size={40} className="icon"/>
-                </a>
+                <SocialIcons/>
             </span>
             <span style={{width:'1vw'}} className="items768px">
                 <Swicth/>
@@ -46,17 +39,7 @@ export function Navbar(){
             <NavItem title={'Home'} link={'/'}/>
             <NavItem title={'Skills'} link={'/skills'}/>
             <NavItem title={'Contact'} link={'/contact'}/>
-            <span className="social">
-                <a href="https://github.com/reytler" target={'_blank'} rel="noopener noreferrer">
-                    <FaGithub size={40} className="icon"/>
-                </a>
-                <a href="https://www.linkedin.com/in/reytlersouza-dev/" target={'_blank'} rel="noopener noreferrer">
-                    <FaLinkedin size={40} className="icon"/>
-                </a>
-                <a href="https://www.instagram.com/reytlermatheus/" target={'_blank'} rel="noopener noreferrer">
-                    <FaInstagram size={40} className="icon"/>
-                </a>
-            </span>
+            <SocialIcons/>
             <span className="wrapperswitch">
                 <Swicth/>
             </span>
