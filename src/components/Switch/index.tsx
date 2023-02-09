@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useTheme } from '../../contexts/ContextTheme';
 import { Wrapped } from './styles';
 
@@ -13,8 +13,8 @@ export default function Swicth(){
 
     return(
         <Wrapped right={right}>
-            <span className='content'>
-                <span className='ball' onClick={()=>toogle()}/>
+            <span className='content' onClick={()=>toogle()}>
+                <span className='ball'/>
             </span>
         </Wrapped>
     )
