@@ -25,7 +25,6 @@ export function Navbar(){
             <span className="items768px">
                 <NavItem title={'Home'} link={'/'}/>
                 <NavItem title={'Skills'} link={'/skills'}/>
-                <NavItem title={'Portifolio'} link={'/portifolio'}/>
                 <NavItem title={'Contact'} link={'/contact'}/>
             </span>
             <span className="items768px">
@@ -46,7 +45,6 @@ export function Navbar(){
         <MenuMobile open={open} onClick={()=>toogleMenu()}>
             <NavItem title={'Home'} link={'/'}/>
             <NavItem title={'Skills'} link={'/skills'}/>
-            <NavItem title={'Portifolio'} link={'/portifolio'}/>
             <NavItem title={'Contact'} link={'/contact'}/>
             <span className="social">
                 <a href="https://github.com/reytler" target={'_blank'} rel="noopener noreferrer">
