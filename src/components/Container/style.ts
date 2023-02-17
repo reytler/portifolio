@@ -9,4 +9,5 @@ export const Wrapper = styled.div`
     width: 90vw;
     margin: 2vh 5vh 0 5vh;
     animation: ${fadeIn} 0.9s forwards;
+    min-height: 100vh;
 `;

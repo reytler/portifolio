@@ -1,10 +1,9 @@
 import { ThemeProvider } from 'styled-components';
-// import {dark} from '../assets/styles/themes/default';
-// import {light} from '../assets/styles/themes/light';
 import {GlobalStyles} from '../assets/styles/global';
 import Routesapp from '../Routes';
 import { Navbar } from './Navbar';
 import { useTheme } from '../contexts/ContextTheme';
+import Footer from './Footer';
 
 function App() {
   const {theme} = useTheme();
@@ -14,6 +13,7 @@ function App() {
       <GlobalStyles/>
         <Navbar/>
         <Routesapp/>
+        <Footer/>
     </ThemeProvider>
   );
 }
