@@ -8,18 +8,21 @@ import {GrReactjs} from 'react-icons/gr';
 import {TbBrandNextjs} from 'react-icons/tb';
 import {DiDotnet} from 'react-icons/di';
 import {GiOctopus} from 'react-icons/gi';
-import {SiStyledcomponents, SiJest, SiExpress, SiDotnet, SiDocker} from 'react-icons/si';
+import {SiStyledcomponents, SiJest, SiExpress, SiDotnet, SiDocker, SiTypescript} from 'react-icons/si';
 
 import { Wrapper } from "./style";
 import Title from "../../components/Title";
+import Project from "../../components/Project";
 export default function Skills(){
+    const JavaScriptref = useRef<null | HTMLDivElement>(null);
     const Oneref = useRef<null | HTMLDivElement>(null);
     const Tworef = useRef<null | HTMLDivElement>(null);
     const Threeref = useRef<null | HTMLDivElement>(null);
     const Topref = useRef<null | HTMLDivElement>(null);
 
     const [skills] = useState([
-        {skill:'JavaScript',function:goToReactJS,icon:(<IoLogoJavascript/>)},
+        {skill:'JavaScript',function:goToJavaScript,icon:(<IoLogoJavascript/>)},
+        {skill:'TypeScript',function:goToReactJS,icon:(<SiTypescript/>)},
         {skill:'ReactJS',function:goToReactJS,icon:(<GrReactjs/>)},
         {skill:'NextJS',function:goToNextJS,icon:(<TbBrandNextjs/>)},
         {skill:'Context-api',function:goToReactJS,icon:(<GrReactjs/>)},
@@ -63,6 +66,10 @@ export default function Skills(){
         Oneref?.current?.scrollIntoView({behavior:"smooth"})
     }
 
+    function goToJavaScript(){
+        JavaScriptref?.current?.scrollIntoView({behavior:"smooth"})
+    }
+
     return(
         <Container>
             <Wrapper>
@@ -76,8 +83,8 @@ export default function Skills(){
                 <div id="two" style={{height:'100vh'}} ref={Tworef}>
                     <h1>Two</h1>
                 </div>
-                <div id="Three" style={{height:'100vh'}} ref={Threeref}>
-                    <h1>Three</h1>
+                <div style={{height:'100vh'}} ref={JavaScriptref}>
+                    <Project url={'https://github.com/reytler/mycontacts'}/>
                 </div>                
                 <Btntop backTotop={()=>{Topref?.current?.scrollIntoView({behavior:"smooth"})}}/>
             </Wrapper>

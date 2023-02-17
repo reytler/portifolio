@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.footer`
     background-color: ${({theme})=>theme.colors.navbarBg};
     font-size: 12px;
     font-weight: lighter;
