@@ -1,6 +1,9 @@
+import Container from "../../components/Container";
 
 export function NotFound(){
     return(
-        <h1>Not Found</h1>
+        <Container>
+            <h1>Not Found</h1>
+        </Container>
     )
 }

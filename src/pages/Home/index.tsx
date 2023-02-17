@@ -1,10 +1,14 @@
 import Container from "../../components/Container";
-import SocialIcons from "../../components/sociaIIcons";
+import TextAbout from "../../components/TextAbout";
+import { Img, Wrapper } from "./styles";
 
 export function Home(){
     return(
         <Container>
-            <SocialIcons/>
+            <Wrapper>
+                <TextAbout/>
+                <Img src={process.env.PUBLIC_URL + "/photohome.png"} alt="photohome"/>
+            </Wrapper>
         </Container>
     )
 }

@@ -1,7 +1,6 @@
 import Logo from "../Logo";
 import { NavItem } from "../NavIntem";
 import { MenuMobile, Wrapper } from "./styles";
-import {FaGithub,FaInstagram, FaLinkedin} from "react-icons/fa";
 import MenuIcon from "../menuIcon";
 import { useState } from "react";
 import Swicth from "../Switch";
