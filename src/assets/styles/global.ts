@@ -1,26 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
 import { DefaultTheme } from '../../types';
-import Roboto from '../fonts/Roboto.ttf';
 import Sora from '../fonts/Sora.ttf';
-import Poppins from '../fonts/Poppins.ttf';
-import Anton from '../fonts/Anton.ttf';
 
 export const GlobalStyles =  createGlobalStyle<{theme: DefaultTheme }>`
     @font-face {
-        font-family: 'Roboto';
-        src: url(${Roboto});
-    }
-    @font-face {
         font-family: 'Sora';
         src: url(${Sora});
-    }
-    @font-face {
-        font-family: 'Poppins';
-        src: url(${Poppins});
-    }
-    @font-face {
-        font-family: 'Anton';
-        src: url(${Anton});
     }
     * {
         margin: 0;
@@ -33,6 +18,7 @@ export const GlobalStyles =  createGlobalStyle<{theme: DefaultTheme }>`
         transition: all .2s ease-in;
         background: ${({theme}) => theme.colors.background};
         font-size: 16px;
+        font-family: 'Sora';
         color: ${({ theme }) => theme.colors.primary};
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
