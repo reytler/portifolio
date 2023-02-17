@@ -8,6 +8,10 @@ export const Wrapper = styled.div`
     word-spacing: 2px;
     text-align: justify;
     font-size: 14px;
-    width: 50vw;
+    line-height: 20px;
     p{ margin-bottom: 15px };
+
+    @media (min-width: 768px) {
+        width: 50vw;
+    }
 `;

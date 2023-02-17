@@ -5,7 +5,7 @@ export default function TextAbout(){
         <Wrapper>
 
             {/* <p>
-                Sou profissional de T.I há mais de 7 anos, chegando a atuar como Administrador de Redes 
+                Sou profissional de T.I há mais de sete anos, chegando a atuar como Administrador de Redes 
                 e posteriormente como Analista de Sistemas em grandes empresas da área de Telecomunicações e também da área
                 educacional. Tenho muita fome de conhecimento e muito entusiasmo em desbravar novas ferramentas e tecnologias,
                 com isso descobri que tenho enorme paixão e aptidão para a área de Desenvolvimento de software.
@@ -29,7 +29,7 @@ export default function TextAbout(){
 
 
             <p>
-                I have been an IT professional for over 7 years, working as a Network Administrator and later as a Systems Analyst in large companies 
+                I have been an IT professional for over seven years, working as a Network Administrator and later as a Systems Analyst in large companies 
                 in the Telecommunications area and also in the educational area. I'm very hungry for knowledge and very enthusiastic about exploring 
                 new tools and technologies, with that I discovered that I have enormous passion and aptitude for the area of ​​software development.
             </p>

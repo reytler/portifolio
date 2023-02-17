@@ -71,6 +71,7 @@ export const MenuMobile = styled.div<{theme: DefaultTheme,open: boolean }>`
     animation: ${({open})=>open?fadeIn:fadeOut} 0.5s forwards;
     position: absolute;
     width: 100vw;
+    z-index: 1;
 
     @media (min-width: 768px) {
         display: none !important;
