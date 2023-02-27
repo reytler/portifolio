@@ -1,7 +1,6 @@
 import { createContext, useContext, useState } from 'react';
 import { dark } from '../assets/styles/themes/default';
 import { light } from '../assets/styles/themes/light';
-import { DefaultTheme } from '../types';
 
 type TContextTheme = {
     toogleTheme: ()=>void;
