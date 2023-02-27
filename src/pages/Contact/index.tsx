@@ -8,7 +8,7 @@ import { Item, Tooltip, Wrapper } from "./style";
 export function Contact(){
 
     const [visible,setVisible] = useState(false);
-    const [text,setText] = useState('Clique para copiar o e-mail!');
+    const [text,setText] = useState('Click to copy!');
 
     function openProject(url:string){
         window.open(url,"_black");
@@ -18,7 +18,7 @@ export function Contact(){
         let tag = document.getElementById("email");
         //@ts-ignore
         navigator.clipboard.writeText(tag?.innerHTML)
-        setText('E-mail copiado!')
+        setText('Email copied!')
     }
 
     return(
