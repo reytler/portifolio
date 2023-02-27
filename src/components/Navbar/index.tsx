@@ -25,7 +25,7 @@ export function Navbar(){
             <span className="items768px">
                 <NavItem title={'Home'} link={'/'}/>
                 <NavItem title={'Skills'} link={'/skills'}/>
-                <NavItem title={'Contact'} link={'/contact'}/>
+                <NavItem title={'Contact me'} link={'/contact'}/>
             </span>
             <span className="items768px">
                 <SocialIcons/>
