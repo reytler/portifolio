@@ -1,26 +1,17 @@
-import { useEffect, useState } from "react"
+import Title from "../Title";
+import { Description, Wrapper } from "./style";
 
-export default function Project({url}:any){
-    const [previewData, setPreviewData] = useState(null);
-    const CORS_PROXY = 'https://crossorigin.me/';
+export default function Project({url,title,description,children}:any){
 
-    useEffect(()=>{
-        async function getData(){
-          
-            try {
-                const res = await fetch(url,{mode:'no-cors'});
-                console.log('RES: ',res)
-            } catch (error) {
-                console.log('ERROR: ',error)
-            }
-        }
-
-        getData()
-    },[])
+    function openProject(url:string){
+        window.open(url,"_black");
+    }
 
     return(
-        <>
-            <h1>{url}</h1>
-        </>
+        <Wrapper onClick={()=>openProject(url)}>
+            <Title title={title}/>
+            <Description>{description}</Description>
+            {children}
+        </Wrapper>
     )
 }

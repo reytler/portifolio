@@ -3,22 +3,34 @@ import { Btntop } from "../../components/btnTop";
 import Container from "../../components/Container";
 import Grid from "../../components/GridSkills";
 
-import {IoLogoJavascript, IoLogoNodejs } from 'react-icons/io';
-import {GrReactjs} from 'react-icons/gr';
-import {TbBrandNextjs} from 'react-icons/tb';
-import {DiDotnet} from 'react-icons/di';
-import {GiOctopus} from 'react-icons/gi';
-import {SiStyledcomponents, SiJest, SiExpress, SiDotnet, SiDocker, SiTypescript} from 'react-icons/si';
+import {
+    IoLogoJavascript,
+    IoLogoNodejs,
+    SiStyledcomponents, 
+    SiJest, 
+    SiExpress, 
+    SiDotnet, 
+    SiDocker, 
+    SiTypescript,
+    GrReactjs,
+    TbBrandNextjs,
+    DiDotnet,
+    GiOctopus
+} from '../../components/Icons';
 
 import { Wrapper } from "./style";
 import Title from "../../components/Title";
 import Project from "../../components/Project";
+import AreaStacks from "../../components/AreaStatcks";
+
 export default function Skills(){
     const JavaScriptref = useRef<null | HTMLDivElement>(null);
-    const Oneref = useRef<null | HTMLDivElement>(null);
-    const Tworef = useRef<null | HTMLDivElement>(null);
-    const Threeref = useRef<null | HTMLDivElement>(null);
+    const Solidref = useRef<null | HTMLDivElement>(null);
+    const Reactref = useRef<null | HTMLDivElement>(null);
+    const Nextref = useRef<null | HTMLDivElement>(null);
     const Topref = useRef<null | HTMLDivElement>(null);
+    const Jestref = useRef<null | HTMLDivElement>(null);
+    const Dockerref = useRef<null | HTMLDivElement>(null);
 
     const [skills] = useState([
         {skill:'JavaScript',function:goToJavaScript,icon:(<IoLogoJavascript/>)},
@@ -39,31 +51,31 @@ export default function Skills(){
     ]);
 
     function goToReactJS(){
-        Oneref?.current?.scrollIntoView({behavior:"smooth"})
+        Reactref?.current?.scrollIntoView({behavior:"smooth"})
     }
 
     function goToNextJS(){
-        Oneref?.current?.scrollIntoView({behavior:"smooth"})
+        Nextref?.current?.scrollIntoView({behavior:"smooth"})
     }
 
     function goToJest(){
-        Oneref?.current?.scrollIntoView({behavior:"smooth"})
+        Jestref?.current?.scrollIntoView({behavior:"smooth"})
     }
 
     function goToStyled(){
-        Oneref?.current?.scrollIntoView({behavior:"smooth"})
+        Reactref?.current?.scrollIntoView({behavior:"smooth"})
     }
 
     function goToDocker(){
-        Oneref?.current?.scrollIntoView({behavior:"smooth"})
+        Dockerref?.current?.scrollIntoView({behavior:"smooth"})
     }
 
     function goToDotnet(){
-        Oneref?.current?.scrollIntoView({behavior:"smooth"})
+        Nextref?.current?.scrollIntoView({behavior:"smooth"})
     }
 
     function goToNodeJS(){
-        Oneref?.current?.scrollIntoView({behavior:"smooth"})
+        Solidref?.current?.scrollIntoView({behavior:"smooth"})
     }
 
     function goToJavaScript(){
@@ -76,15 +88,123 @@ export default function Skills(){
                 <div style={{minHeight:'100vh'}} ref={Topref}>
                     <Title title={'Skills'}/>
                     <Grid skills={skills}/>
-                </div>            
-                <div id="one" style={{height:'100vh'}} ref={Oneref}>
-                    <h1>One</h1>
+                </div>     
+
+                <div style={{height:'100vh',paddingTop:'30vh'}} ref={Solidref}>
+                    <Project 
+                            url={'https://github.com/reytler/apirest-solid'}
+                            title={'Api Rest applying SOLID'}
+                            description={'Api REST created using the concepts of SOLID and also using the TypeScript.'}
+                    >
+                        <AreaStacks>
+                            <SiTypescript/>
+                            <SiExpress/>
+                            <IoLogoNodejs/>
+                        </AreaStacks>
+
+                        <p style={{fontSize:'12px'}}>
+                            click me to see project...
+                        </p>
+
+                    </Project>
                 </div>
-                <div id="two" style={{height:'100vh'}} ref={Tworef}>
-                    <h1>Two</h1>
+
+                <div style={{height:'100vh',paddingTop:'30vh'}} ref={Reactref}>
+                    <Project 
+                            url={'https://github.com/reytler/portifolio'}
+                            title={'Portfolio ReactJS'}
+                            description={'Portfolio designed to demonstrate my programming skills.'}
+                    >
+                        <AreaStacks>
+                            <SiTypescript/>
+                            <GrReactjs/>
+                            <SiStyledcomponents/>
+                        </AreaStacks>
+
+                        <p style={{fontSize:'12px'}}>
+                            click me to see project...
+                        </p>
+
+                    </Project>
                 </div>
-                <div style={{height:'100vh'}} ref={JavaScriptref}>
-                    <Project url={'https://github.com/reytler/mycontacts'}/>
+
+                <div style={{height:'100vh',paddingTop:'30vh'}} ref={Jestref}>
+                    <Project 
+                            url={'https://github.com/reytler/Token'}
+                            title={'Token Management'}
+                            description={'The repository can be used as a sub-module for encoding and decoding tokens for the web.'}
+                    >
+                        <AreaStacks>
+                            <SiTypescript/>
+                            <IoLogoNodejs/>
+                            <SiJest/>
+                        </AreaStacks>
+
+                        <p style={{fontSize:'12px'}}>
+                            click me to see project...
+                        </p>
+
+                    </Project>
+                </div>
+                
+                <div style={{height:'100vh',paddingTop:'30vh'}} ref={Nextref}>
+                    <Project 
+                            url={'https://github.com/reytler/verzel'}
+                            title={'Verzel cars'}
+                            description={'Project developed for testing in a development company.'}
+                    >
+                        <AreaStacks>
+                            <SiTypescript/>
+                            <DiDotnet/>
+                            <TbBrandNextjs/>
+                            <GrReactjs/>
+                            <SiStyledcomponents/>
+                            <SiDocker/>
+                            <GiOctopus/>
+                        </AreaStacks>
+
+                        <p style={{fontSize:'12px'}}>
+                            click me to see project...
+                        </p>
+
+                    </Project>
+                </div>
+
+                <div style={{height:'100vh',paddingTop:'30vh'}} ref={Dockerref}>
+                    <Project 
+                        url={'https://github.com/reytler/zabbix_docker'}
+                        title={'Zabbix Docker'}
+                        description={'Zabbix deployment complete with Docker-Compose'}
+                    >
+                        <AreaStacks>
+                            <SiDocker/>
+                            <GiOctopus/>
+                        </AreaStacks>
+
+                        <p style={{fontSize:'12px'}}>
+                            click me to see project...
+                        </p>
+                    </Project>
+                </div>   
+
+                <div style={{height:'100vh',paddingTop:'30vh'}} ref={JavaScriptref}>
+                    <Project 
+                        url={'https://github.com/reytler/mycontacts'}
+                        title={'MyContacts project of course JStack'}
+                        description={'The software is designed to manage personal contacts.'}
+                    >
+                        <AreaStacks>
+                            <IoLogoJavascript/>
+                            <GrReactjs/>
+                            <SiStyledcomponents/>
+                            <SiExpress/>
+                            <IoLogoNodejs/>
+                        </AreaStacks>
+
+                        <p style={{fontSize:'12px'}}>
+                            click me to see project...
+                        </p>
+                    </Project>
                 </div>                
                 <Btntop backTotop={()=>{Topref?.current?.scrollIntoView({behavior:"smooth"})}}/>
             </Wrapper>
