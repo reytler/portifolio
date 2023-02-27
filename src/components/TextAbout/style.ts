@@ -11,6 +11,11 @@ export const Wrapper = styled.article`
     line-height: 20px;
     p{ margin-bottom: 15px };
 
+    @media (max-width: 425px) {
+        font-size: 12px;
+        width: 80vw;
+    }
+
     @media (min-width: 768px) {
         width: 50vw;
     }
