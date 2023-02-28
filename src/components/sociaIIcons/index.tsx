@@ -5,13 +5,13 @@ export default function SocialIcons(){
     return(
         <Wrapper>
             <Icon href="https://github.com/reytler" target="_blank" rel="noopener noreferrer">
-                <FaGithub size={40} className="icon"/>
+                <FaGithub className="icon"/>
             </Icon>
             <Icon href="https://www.linkedin.com/in/reytlersouza-dev/" target="_blank" rel="noopener noreferrer">
-                <FaLinkedin size={40} className="icon"/>
+                <FaLinkedin className="icon"/>
             </Icon>
             <Icon href="https://www.instagram.com/reytlermatheus/" target="_blank" rel="noopener noreferrer">
-                <FaInstagram size={40} className="icon"/>
+                <FaInstagram className="icon"/>
             </Icon>
         </Wrapper>
     )

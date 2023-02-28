@@ -1,17 +1,19 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-    height: 100vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-top: 20vh;
 
     #email{
         display: none;
     }
 
-    @media (max-width: 425px) {
+    @media (max-width: 584px) {
         flex-direction: column;
+        gap: 40px;
+        margin-top: 20vh;
     }
 `;
 

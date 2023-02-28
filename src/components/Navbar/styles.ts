@@ -33,7 +33,7 @@ export const Wrapper = styled.div<{theme: DefaultTheme }>`
     }
 
     .items768px {
-        @media (max-width: 425px) {
+        @media (max-width: 767px) {
             display: none !important;
         }
     }
@@ -72,6 +72,15 @@ export const MenuMobile = styled.div<{theme: DefaultTheme,open: boolean }>`
     position: absolute;
     width: 100vw;
     z-index: 1;
+    
+    @media (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        gap: 15px;        
+    }
+
 
     @media (min-width: 768px) {
         display: none !important;

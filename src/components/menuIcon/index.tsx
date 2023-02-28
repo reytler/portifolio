@@ -24,7 +24,7 @@ const Wrapper = styled.span<{grade: number}>`
 
 const Container = styled.span`
     display: none !important;
-    @media (max-width: 425px) {
+    @media (max-width: 767px) {
         display: block !important;
     }
 `;
