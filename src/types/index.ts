@@ -6,7 +6,9 @@ interface Icolors {
     hover: string,
     active: string,
     borderPhoto: string,
-    opaco: string
+    opaco: string,
+    linkColor: string,
+    linkColorHover: string
 }
 
 export interface DefaultTheme {

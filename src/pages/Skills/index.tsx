@@ -7,8 +7,7 @@ import {
     IoLogoJavascript,
     IoLogoNodejs,
     SiStyledcomponents, 
-    SiJest, 
-    SiExpress, 
+    SiJest,  
     SiDotnet, 
     SiDocker, 
     SiTypescript,
@@ -20,11 +19,9 @@ import {
 
 import { Wrapper } from "./style";
 import Title from "../../components/Title";
-import Project from "../../components/Project";
-import AreaStacks from "../../components/AreaStatcks";
+import {Project} from "../../components/Project";
 
 export default function Skills(){
-    const JavaScriptref = useRef<null | HTMLDivElement>(null);
     const Solidref = useRef<null | HTMLDivElement>(null);
     const Reactref = useRef<null | HTMLDivElement>(null);
     const Nextref = useRef<null | HTMLDivElement>(null);
@@ -33,15 +30,16 @@ export default function Skills(){
     const Dockerref = useRef<null | HTMLDivElement>(null);
 
     const [skills] = useState([
-        {skill:'JavaScript',function:goToJavaScript,icon:(<IoLogoJavascript/>)},
+        {skill:'Solid Clean Arch',function:goToSolidJS,icon:(<SiTypescript/>)},
+        {skill:'JavaScript',function:goToReactJS,icon:(<IoLogoJavascript/>)},
         {skill:'TypeScript',function:goToReactJS,icon:(<SiTypescript/>)},
         {skill:'ReactJS',function:goToReactJS,icon:(<GrReactjs/>)},
         {skill:'NextJS',function:goToNextJS,icon:(<TbBrandNextjs/>)},
         {skill:'Context-api',function:goToReactJS,icon:(<GrReactjs/>)},
         {skill:'Styled-components',function:goToStyled,icon:(<SiStyledcomponents/>)},
         {skill:'Jest',function:goToJest,icon:(<SiJest/>)},
-        {skill:'NodeJS',function:goToNodeJS,icon:(<IoLogoNodejs/>)},
-        {skill:'Express',function:goToNodeJS,icon:(<SiExpress/>)},
+        // {skill:'NodeJS',function:goToNodeJS,icon:(<IoLogoNodejs/>)},
+        // {skill:'Express',function:goToNodeJS,icon:(<SiExpress/>)},
         {skill:'Dotnet',function:goToDotnet,icon:(<SiDotnet/>)},
         {skill:'ASP.NET',function:goToDotnet,icon:(<DiDotnet/>)},
         {skill:'Entity Framework',function:goToDotnet,icon:(<DiDotnet/>)},
@@ -74,12 +72,8 @@ export default function Skills(){
         Nextref?.current?.scrollIntoView({behavior:"smooth"})
     }
 
-    function goToNodeJS(){
+    function goToSolidJS(){
         Solidref?.current?.scrollIntoView({behavior:"smooth"})
-    }
-
-    function goToJavaScript(){
-        JavaScriptref?.current?.scrollIntoView({behavior:"smooth"})
     }
 
     return(
@@ -91,69 +85,60 @@ export default function Skills(){
                 </div>     
 
                 <div style={{height:'100vh',paddingTop:'30vh'}} ref={Solidref}>
-                    <Project 
-                            url={'https://github.com/reytler/apirest-solid'}
-                            title={'Api Rest applying SOLID'}
-                            description={'Api REST created using the concepts of SOLID and also using the TypeScript.'}
+                    <Project.Root 
+                            title={'Pokedex'}
+                            description={`
+                            NOTE: Under development! Project created for practice, addressing SOLID and Clean Architecture
+                            `}
                     >
-                        <AreaStacks>
+                        <Project.AreaStacks>
                             <SiTypescript/>
-                            <SiExpress/>
-                            <IoLogoNodejs/>
-                        </AreaStacks>
-
-                        <p style={{fontSize:'12px'}}>
-                            click me to see project...
-                        </p>
-
-                    </Project>
+                            <GrReactjs/>
+                            <SiJest/>
+                        </Project.AreaStacks>
+                        <Project.Thumb img={process.env.PUBLIC_URL+'/pokedex_thumb.png'} link="https://pokedexreyt.netlify.app/"/>
+                        <Project.LinkRepo link={'https://github.com/reytler/pokedex'}/>
+                    </Project.Root>
                 </div>
 
                 <div style={{height:'100vh',paddingTop:'30vh'}} ref={Reactref}>
-                    <Project 
-                            url={'https://github.com/reytler/portifolio'}
+                    <Project.Root 
                             title={'Portfolio ReactJS'}
                             description={'Portfolio designed to demonstrate my programming skills.'}
                     >
-                        <AreaStacks>
+                        <Project.AreaStacks>
                             <SiTypescript/>
                             <GrReactjs/>
                             <SiStyledcomponents/>
-                        </AreaStacks>
+                        </Project.AreaStacks>
 
-                        <p style={{fontSize:'12px'}}>
-                            click me to see project...
-                        </p>
+                        <Project.LinkRepo link={'https://github.com/reytler/portifolio'}/>
 
-                    </Project>
+                    </Project.Root>
                 </div>
 
                 <div style={{height:'100vh',paddingTop:'30vh'}} ref={Jestref}>
-                    <Project 
-                            url={'https://github.com/reytler/Token'}
+                    <Project.Root 
                             title={'Token Management'}
                             description={'The repository can be used as a sub-module for encoding and decoding tokens for the web.'}
                     >
-                        <AreaStacks>
+                        <Project.AreaStacks>
                             <SiTypescript/>
                             <IoLogoNodejs/>
                             <SiJest/>
-                        </AreaStacks>
+                        </Project.AreaStacks>
 
-                        <p style={{fontSize:'12px'}}>
-                            click me to see project...
-                        </p>
+                        <Project.LinkRepo link={'https://github.com/reytler/Token'}/>
 
-                    </Project>
+                    </Project.Root>
                 </div>
                 
                 <div style={{height:'100vh',paddingTop:'30vh'}} ref={Nextref}>
-                    <Project 
-                            url={'https://github.com/reytler/verzel'}
+                    <Project.Root 
                             title={'Verzel cars'}
                             description={'Project developed for testing in a development company.'}
                     >
-                        <AreaStacks>
+                        <Project.AreaStacks>
                             <SiTypescript/>
                             <DiDotnet/>
                             <TbBrandNextjs/>
@@ -161,51 +146,25 @@ export default function Skills(){
                             <SiStyledcomponents/>
                             <SiDocker/>
                             <GiOctopus/>
-                        </AreaStacks>
+                        </Project.AreaStacks>
 
-                        <p style={{fontSize:'12px'}}>
-                            click me to see project...
-                        </p>
-
-                    </Project>
+                        <Project.LinkRepo link={'https://github.com/reytler/verzel'}/>
+                    </Project.Root>
                 </div>
 
                 <div style={{height:'100vh',paddingTop:'30vh'}} ref={Dockerref}>
-                    <Project 
-                        url={'https://github.com/reytler/zabbix_docker'}
+                    <Project.Root 
                         title={'Zabbix Docker'}
                         description={'Zabbix deployment complete with Docker-Compose'}
                     >
-                        <AreaStacks>
+                        <Project.AreaStacks>
                             <SiDocker/>
                             <GiOctopus/>
-                        </AreaStacks>
+                        </Project.AreaStacks>
 
-                        <p style={{fontSize:'12px'}}>
-                            click me to see project...
-                        </p>
-                    </Project>
-                </div>   
-
-                <div style={{height:'100vh',paddingTop:'30vh'}} ref={JavaScriptref}>
-                    <Project 
-                        url={'https://github.com/reytler/mycontacts'}
-                        title={'MyContacts project of course JStack'}
-                        description={'The software is designed to manage personal contacts.'}
-                    >
-                        <AreaStacks>
-                            <IoLogoJavascript/>
-                            <GrReactjs/>
-                            <SiStyledcomponents/>
-                            <SiExpress/>
-                            <IoLogoNodejs/>
-                        </AreaStacks>
-
-                        <p style={{fontSize:'12px'}}>
-                            click me to see project...
-                        </p>
-                    </Project>
-                </div>                
+                        <Project.LinkRepo link={'https://github.com/reytler/zabbix_docker'}/>
+                    </Project.Root>
+                </div>                 
                 <Btntop backTotop={()=>{Topref?.current?.scrollIntoView({behavior:"smooth"})}}/>
             </Wrapper>
         </Container>
