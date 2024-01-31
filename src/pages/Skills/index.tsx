@@ -31,13 +31,13 @@ export default function Skills(){
 
     const [skills] = useState([
         {skill:'Solid Clean Arch',function:goToSolidJS,icon:(<SiTypescript/>)},
-        {skill:'JavaScript',function:goToReactJS,icon:(<IoLogoJavascript/>)},
-        {skill:'TypeScript',function:goToReactJS,icon:(<SiTypescript/>)},
-        {skill:'ReactJS',function:goToReactJS,icon:(<GrReactjs/>)},
+        {skill:'JavaScript',function:goToSolidJS,icon:(<IoLogoJavascript/>)},
+        {skill:'TypeScript',function:goToSolidJS,icon:(<SiTypescript/>)},
+        {skill:'ReactJS',function:goToSolidJS,icon:(<GrReactjs/>)},
+        {skill:'Jest',function:goToSolidJS,icon:(<SiJest/>)},
         {skill:'NextJS',function:goToNextJS,icon:(<TbBrandNextjs/>)},
         {skill:'Context-api',function:goToReactJS,icon:(<GrReactjs/>)},
         {skill:'Styled-components',function:goToStyled,icon:(<SiStyledcomponents/>)},
-        {skill:'Jest',function:goToJest,icon:(<SiJest/>)},
         // {skill:'NodeJS',function:goToNodeJS,icon:(<IoLogoNodejs/>)},
         // {skill:'Express',function:goToNodeJS,icon:(<SiExpress/>)},
         {skill:'Dotnet',function:goToDotnet,icon:(<SiDotnet/>)},
@@ -54,10 +54,6 @@ export default function Skills(){
 
     function goToNextJS(){
         Nextref?.current?.scrollIntoView({behavior:"smooth"})
-    }
-
-    function goToJest(){
-        Jestref?.current?.scrollIntoView({behavior:"smooth"})
     }
 
     function goToStyled(){
